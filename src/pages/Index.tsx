@@ -6,11 +6,10 @@ import CollaborateSection from "@/components/CollaborateSection";
 import DonateSection from "@/components/DonateSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import GallerySection from "@/components/GallerySection";
-import WorkWithUsSection from "@/components/WorkWithUsSection";
 import InterventionSection from "@/components/InterventionSection";
 import PrivateShowsSection from "@/components/PrivateShowsSection";
 import DocumentsSection from "@/components/DocumentsSection";
-import ContactSection from "@/components/ContactSection";
+import UnifiedContactSection from "@/components/UnifiedContactSection";
 import Footer from "@/components/Footer";
 
 const Index = () => (
@@ -23,11 +22,10 @@ const Index = () => (
     <DonateSection />
     <TestimonialsSection />
     <GallerySection />
-    <WorkWithUsSection />
     <InterventionSection />
     <PrivateShowsSection />
     <DocumentsSection />
-    <ContactSection />
+    <UnifiedContactSection />
     <Footer />
   </main>
 );
