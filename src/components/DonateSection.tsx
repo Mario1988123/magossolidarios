@@ -132,7 +132,7 @@ const DonateSection = () => {
                   <p className="font-body text-foreground font-mono text-sm">676 692 411</p>
                 </div>
                 <button onClick={() => copyToClipboard("676692411", "bizum")} className="text-muted-foreground hover:text-primary transition-colors p-2">
-                  {copiedBizum ? <Check className="w-5 h-5 text-green-500" /> : <Copy className="w-5 h-5" />}
+                  {copiedBizum ? <Check className="w-5 h-5 text-primary" /> : <Copy className="w-5 h-5" />}
                 </button>
               </div>
             </div>
