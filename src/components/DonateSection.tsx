@@ -123,7 +123,7 @@ const DonateSection = () => {
                   <p className="font-body text-foreground font-mono text-sm">ES40 3159 0015 8131 3751 2723</p>
                 </div>
                 <button onClick={() => copyToClipboard("ES40 3159 0015 8131 3751 2723", "iban")} className="text-muted-foreground hover:text-primary transition-colors p-2">
-                  {copiedIban ? <Check className="w-5 h-5 text-green-500" /> : <Copy className="w-5 h-5" />}
+                  {copiedIban ? <Check className="w-5 h-5 text-primary" /> : <Copy className="w-5 h-5" />}
                 </button>
               </div>
               <div className="bg-background rounded-lg p-4 border border-border flex items-center justify-between">
