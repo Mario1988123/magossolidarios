@@ -1,5 +1,6 @@
 import FadeIn from "./FadeIn";
 import { useState } from "react";
+import { X } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -7,6 +8,7 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from "@/components/ui/carousel";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 import foto10 from "@/assets/gallery/foto-10.jpeg";
 import foto11 from "@/assets/gallery/foto-11.jpeg";
@@ -18,6 +20,16 @@ import foto16 from "@/assets/gallery/foto-16.jpeg";
 import foto17 from "@/assets/gallery/foto-17.jpeg";
 import foto18 from "@/assets/gallery/foto-18.jpeg";
 import foto19 from "@/assets/gallery/foto-19.jpeg";
+import foto20 from "@/assets/gallery/foto-20.jpeg";
+import foto21 from "@/assets/gallery/foto-21.jpeg";
+import foto22 from "@/assets/gallery/foto-22.jpeg";
+import foto23 from "@/assets/gallery/foto-23.jpeg";
+import foto24 from "@/assets/gallery/foto-24.jpeg";
+import foto25 from "@/assets/gallery/foto-25.jpeg";
+import foto26 from "@/assets/gallery/foto-26.jpeg";
+import foto27 from "@/assets/gallery/foto-27.jpeg";
+import foto28 from "@/assets/gallery/foto-28.jpeg";
+import foto29 from "@/assets/gallery/foto-29.jpeg";
 
 const categories = [
   { id: "ayuntamientos", label: "Ayuntamientos", desc: "Eventos mágicos organizados junto a ayuntamientos para apoyar iniciativas sociales locales." },
@@ -28,10 +40,13 @@ const categories = [
 const galleryPhotos = [
   foto10, foto11, foto12, foto13, foto14,
   foto15, foto16, foto17, foto18, foto19,
+  foto20, foto21, foto22, foto23, foto24,
+  foto25, foto26, foto27, foto28, foto29,
 ];
 
 const GallerySection = () => {
   const [activeTab, setActiveTab] = useState("ayuntamientos");
+  const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
   const activeCategory = categories.find((c) => c.id === activeTab)!;
 
   return (
@@ -80,7 +95,10 @@ const GallerySection = () => {
               <CarouselContent>
                 {galleryPhotos.map((src, i) => (
                   <CarouselItem key={i} className="basis-full md:basis-1/3">
-                    <div className="aspect-[4/3] rounded-lg overflow-hidden border border-border">
+                    <div
+                      className="aspect-[4/3] rounded-lg overflow-hidden border border-border cursor-pointer"
+                      onClick={() => setSelectedPhoto(src)}
+                    >
                       <img
                         src={src}
                         alt={`Actuación ${i + 10}`}
@@ -97,6 +115,25 @@ const GallerySection = () => {
           </div>
         </FadeIn>
       </div>
+
+      {/* Lightbox */}
+      <Dialog open={!!selectedPhoto} onOpenChange={() => setSelectedPhoto(null)}>
+        <DialogContent className="max-w-[90vw] max-h-[90vh] p-0 border-none bg-transparent shadow-none [&>button]:hidden">
+          <button
+            onClick={() => setSelectedPhoto(null)}
+            className="absolute top-2 right-2 z-50 bg-background/80 backdrop-blur-sm rounded-full p-2 text-foreground hover:bg-background transition-colors"
+          >
+            <X className="h-5 w-5" />
+          </button>
+          {selectedPhoto && (
+            <img
+              src={selectedPhoto}
+              alt="Foto ampliada"
+              className="w-full h-full max-h-[85vh] object-contain rounded-lg"
+            />
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
