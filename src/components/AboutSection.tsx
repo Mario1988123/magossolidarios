@@ -1,6 +1,16 @@
 import FadeIn from "./FadeIn";
 import { Heart, Eye, Sparkles } from "lucide-react";
 
+import photoJoseAtienza from "@/assets/team/jose-atienza.jpg";
+import photoMiguelRibera from "@/assets/team/miguel-ribera.jpeg";
+import photoBorjaMazorriaga from "@/assets/team/borja-mazorriaga.jpg";
+import photoMonicaPerpina from "@/assets/team/monica-perpina.jpg";
+import photoIvanArribas from "@/assets/team/ivan-arribas.jpg";
+import photoNoeliaOliver from "@/assets/team/noelia-oliver.jpg";
+import photoJoseCaballero from "@/assets/team/jose-caballero.jpg";
+import photoAlejandraRodriguez from "@/assets/team/alejandra-rodriguez.jpg";
+import photoMonicaGarcia from "@/assets/team/monica-garcia.jpeg";
+
 const values = [
   { icon: Heart, title: "Solidaridad", desc: "Actuamos con empatía y compromiso hacia quienes más lo necesitan." },
   { icon: Eye, title: "Transparencia", desc: "Gestionamos los recursos con responsabilidad y claridad." },
@@ -8,15 +18,15 @@ const values = [
 ];
 
 const teamMembers = [
-  { name: "José Atienza", role: "Presidente", photo: 1 },
-  { name: "Miguel Ribera", role: "Tesorero", photo: 2 },
-  { name: "Borja Mazorriaga", role: "Secretario", photo: 3 },
-  { name: "Mónica Perpiñá", role: "Vocal", photo: 4 },
-  { name: "Iván Arribas", role: "Vocal", photo: 5 },
-  { name: "Noelia Oliver", role: "Vocal", photo: 6 },
-  { name: "Jose Caballero", role: "Vocal", photo: 7 },
-  { name: "Alejandra Rodríguez", role: "Vocal", photo: 8 },
-  { name: "Mónica García", role: "Vocal", photo: 9 },
+  { name: "José Atienza", role: "Presidente", photo: photoJoseAtienza },
+  { name: "Miguel Ribera", role: "Tesorero", photo: photoMiguelRibera },
+  { name: "Borja Mazorriaga", role: "Secretario", photo: photoBorjaMazorriaga },
+  { name: "Mónica Perpiñá", role: "Vocal", photo: photoMonicaPerpina },
+  { name: "Iván Arribas", role: "Vocal", photo: photoIvanArribas },
+  { name: "Noelia Oliver", role: "Vocal", photo: photoNoeliaOliver },
+  { name: "Jose Caballero", role: "Vocal", photo: photoJoseCaballero },
+  { name: "Alejandra Rodríguez", role: "Vocal", photo: photoAlejandraRodriguez },
+  { name: "Mónica García", role: "Vocal", photo: photoMonicaGarcia },
 ];
 
 const AboutSection = () => (
@@ -82,10 +92,8 @@ const AboutSection = () => (
         {teamMembers.map((member, i) => (
           <FadeIn key={member.name} delay={i * 0.08}>
             <div className="text-center group">
-              <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-card border-2 border-border group-hover:border-primary/50 transition-colors overflow-hidden flex items-center justify-center shadow-card">
-                <span className="font-display text-3xl font-bold text-primary/40">
-                  {member.photo}
-                </span>
+              <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-card border-2 border-border group-hover:border-primary/50 transition-colors overflow-hidden shadow-card">
+                <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
               </div>
               <h4 className="font-display text-sm font-semibold text-foreground">{member.name}</h4>
               <p className="font-body text-xs text-primary">{member.role}</p>
