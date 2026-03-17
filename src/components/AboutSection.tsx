@@ -92,10 +92,8 @@ const AboutSection = () => (
         {teamMembers.map((member, i) => (
           <FadeIn key={member.name} delay={i * 0.08}>
             <div className="text-center group">
-              <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-card border-2 border-border group-hover:border-primary/50 transition-colors overflow-hidden flex items-center justify-center shadow-card">
-                <span className="font-display text-3xl font-bold text-primary/40">
-                  {member.photo}
-                </span>
+              <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-card border-2 border-border group-hover:border-primary/50 transition-colors overflow-hidden shadow-card">
+                <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
               </div>
               <h4 className="font-display text-sm font-semibold text-foreground">{member.name}</h4>
               <p className="font-body text-xs text-primary">{member.role}</p>
