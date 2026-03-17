@@ -1,5 +1,23 @@
 import FadeIn from "./FadeIn";
 import { useState } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
+
+import foto10 from "@/assets/gallery/foto-10.jpeg";
+import foto11 from "@/assets/gallery/foto-11.jpeg";
+import foto12 from "@/assets/gallery/foto-12.jpeg";
+import foto13 from "@/assets/gallery/foto-13.jpeg";
+import foto14 from "@/assets/gallery/foto-14.jpeg";
+import foto15 from "@/assets/gallery/foto-15.jpeg";
+import foto16 from "@/assets/gallery/foto-16.jpeg";
+import foto17 from "@/assets/gallery/foto-17.jpeg";
+import foto18 from "@/assets/gallery/foto-18.jpeg";
+import foto19 from "@/assets/gallery/foto-19.jpeg";
 
 const categories = [
   { id: "ayuntamientos", label: "Ayuntamientos", desc: "Eventos mágicos organizados junto a ayuntamientos para apoyar iniciativas sociales locales." },
@@ -7,12 +25,10 @@ const categories = [
   { id: "otras", label: "Otras Actividades", desc: "Cuentacuentos, clowns, workshops, charlas, masterclass, talleres y apoyo institucional." },
 ];
 
-// Numbered placeholders: 10-24 for gallery photos
-const galleryPhotos: Record<string, number[]> = {
-  ayuntamientos: [10, 11, 12, 13],
-  asociaciones: [14, 15, 16, 17],
-  otras: [18, 19, 20, 21, 22, 23],
-};
+const galleryPhotos = [
+  foto10, foto11, foto12, foto13, foto14,
+  foto15, foto16, foto17, foto18, foto19,
+];
 
 const GallerySection = () => {
   const [activeTab, setActiveTab] = useState("ayuntamientos");
@@ -33,7 +49,7 @@ const GallerySection = () => {
 
         {/* Tabs */}
         <FadeIn delay={0.2}>
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
+          <div className="flex flex-wrap justify-center gap-2 mb-4">
             {categories.map((cat) => (
               <button
                 key={cat.id}
@@ -48,28 +64,38 @@ const GallerySection = () => {
               </button>
             ))}
           </div>
-        </FadeIn>
-
-        <FadeIn>
           <p className="font-body text-muted-foreground text-center text-sm mb-8">{activeCategory.desc}</p>
         </FadeIn>
 
-        {/* Photo Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {galleryPhotos[activeTab].map((num) => (
-            <div
-              key={num}
-              className="aspect-square bg-card rounded-lg border border-border overflow-hidden flex items-center justify-center hover:border-primary/30 transition-colors group cursor-pointer"
+        {/* Carousel */}
+        <FadeIn delay={0.3}>
+          <div className="px-12">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
             >
-              <div className="text-center">
-                <span className="font-display text-4xl font-bold text-primary/30 group-hover:text-primary/60 transition-colors">
-                  {num}
-                </span>
-                <p className="font-body text-xs text-muted-foreground/50 mt-2">Foto #{num}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+              <CarouselContent>
+                {galleryPhotos.map((src, i) => (
+                  <CarouselItem key={i} className="basis-full md:basis-1/3">
+                    <div className="aspect-[4/3] rounded-lg overflow-hidden border border-border">
+                      <img
+                        src={src}
+                        alt={`Actuación ${i + 10}`}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );
