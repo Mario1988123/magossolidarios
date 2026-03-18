@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.jpeg";
+import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
   { label: "Inicio", href: "#inicio" },
@@ -37,17 +38,23 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <a
-          href="#donativo"
-          className="hidden lg:inline-flex bg-gradient-gold text-primary-foreground font-body font-semibold text-sm px-6 py-2 rounded-lg hover:opacity-90 transition-opacity"
-        >
-          Donar
-        </a>
+        <div className="hidden lg:flex items-center gap-3">
+          <ThemeToggle />
+          <a
+            href="#donativo"
+            className="bg-gradient-gold text-primary-foreground font-body font-semibold text-sm px-6 py-2 rounded-lg hover:opacity-90 transition-opacity"
+          >
+            Donar
+          </a>
+        </div>
 
         {/* Mobile */}
-        <button onClick={() => setOpen(!open)} className="lg:hidden text-foreground">
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="lg:hidden flex items-center gap-2">
+          <ThemeToggle />
+          <button onClick={() => setOpen(!open)} className="text-foreground">
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {open && (

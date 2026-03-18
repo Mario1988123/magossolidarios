@@ -2,14 +2,15 @@ import FadeIn from "./FadeIn";
 import { Heart, Eye, Sparkles } from "lucide-react";
 
 import photoJoseAtienza from "@/assets/team/jose-atienza.jpg";
-import photoMiguelRibera from "@/assets/team/miguel-ribera.jpeg";
+import photoMonicaGarcia from "@/assets/team/monica-garcia.jpeg";
 import photoBorjaMazorriaga from "@/assets/team/borja-mazorriaga.jpg";
+import photoMiguelRibera from "@/assets/team/miguel-ribera.jpeg";
 import photoMonicaPerpina from "@/assets/team/monica-perpina.jpg";
 import photoIvanArribas from "@/assets/team/ivan-arribas.jpg";
 import photoNoeliaOliver from "@/assets/team/noelia-oliver.jpg";
 import photoJoseCaballero from "@/assets/team/jose-caballero.jpg";
 import photoAlejandraRodriguez from "@/assets/team/alejandra-rodriguez.jpg";
-import photoMonicaGarcia from "@/assets/team/monica-garcia.jpeg";
+import photoCarlaCaballero from "@/assets/team/carla-caballero.jpeg";
 
 const values = [
   { icon: Heart, title: "Solidaridad", desc: "Actuamos con empatía y compromiso hacia quienes más lo necesitan." },
@@ -19,14 +20,15 @@ const values = [
 
 const teamMembers = [
   { name: "José Atienza", role: "Presidente", photo: photoJoseAtienza },
-  { name: "Miguel Ribera", role: "Tesorero", photo: photoMiguelRibera },
+  { name: "Mónica García", role: "Vicepresidenta", photo: photoMonicaGarcia },
   { name: "Borja Mazorriaga", role: "Secretario", photo: photoBorjaMazorriaga },
+  { name: "Miguel Ribera", role: "Tesorero", photo: photoMiguelRibera },
   { name: "Mónica Perpiñá", role: "Vocal", photo: photoMonicaPerpina },
   { name: "Iván Arribas", role: "Vocal", photo: photoIvanArribas },
   { name: "Noelia Oliver", role: "Vocal", photo: photoNoeliaOliver },
   { name: "Jose Caballero", role: "Vocal", photo: photoJoseCaballero },
   { name: "Alejandra Rodríguez", role: "Vocal", photo: photoAlejandraRodriguez },
-  { name: "Mónica García", role: "Vocal", photo: photoMonicaGarcia },
+  { name: "Carla Caballero", role: "Vocal", photo: photoCarlaCaballero },
 ];
 
 const AboutSection = () => (
@@ -88,7 +90,7 @@ const AboutSection = () => (
           Nuestro <span className="text-gradient-gold">Equipo</span>
         </h3>
       </FadeIn>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {teamMembers.map((member, i) => (
           <FadeIn key={member.name} delay={i * 0.08}>
             <div className="text-center group">
