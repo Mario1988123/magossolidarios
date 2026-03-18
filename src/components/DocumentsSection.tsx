@@ -2,9 +2,11 @@ import FadeIn from "./FadeIn";
 import { FileText, ExternalLink } from "lucide-react";
 
 const documents = [
-  { name: "Acta de constitución", url: "https://drive.google.com/drive/folders/1X8utruqN9XAKT8DQEQjSFqt507zijTDG" },
-  { name: "Estatutos", url: "https://drive.google.com/drive/folders/1X8utruqN9XAKT8DQEQjSFqt507zijTDG" },
-  { name: "Documentación oficial", url: "https://drive.google.com/drive/folders/1X8utruqN9XAKT8DQEQjSFqt507zijTDG" },
+  { name: "Acta fundacional", url: "/docs/acta-fundacional.pdf" },
+  { name: "Estatutos", url: "/docs/estatutos.pdf" },
+  { name: "Resolución de constitución", url: "/docs/resolucion-constitucion.pdf" },
+  { name: "CIF", url: "/docs/cif.pdf" },
+  { name: "Asociación de Magos Solidarios", url: "/docs/asociacion-magos-solidarios.pdf" },
 ];
 
 const DocumentsSection = () => (
