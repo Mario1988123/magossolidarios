@@ -1,6 +1,7 @@
 import FadeIn from "./FadeIn";
 import { useState } from "react";
-import { Heart, Copy, Check, Info } from "lucide-react";
+import { Heart, Copy, Check, Info, X } from "lucide-react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 const DonateSection = () => {
   const [amount, setAmount] = useState<number | null>(null);
@@ -9,6 +10,8 @@ const DonateSection = () => {
   const [donorData, setDonorData] = useState({ nombre: "", apellidos: "", telefono: "", email: "", direccion: "" });
   const [submitted, setSubmitted] = useState(false);
   const [copiedBizum, setCopiedBizum] = useState(false);
+  const [copiedIban, setCopiedIban] = useState(false);
+  const [showInfoModal, setShowInfoModal] = useState(false);
 
   const finalAmount = amount || (customAmount ? parseFloat(customAmount) : 0);
 
@@ -28,10 +31,15 @@ const DonateSection = () => {
     setTimeout(() => setSubmitted(false), 5000);
   };
 
-  const copyToClipboard = (text: string) => {
+  const copyToClipboard = (text: string, type: "bizum" | "iban") => {
     navigator.clipboard.writeText(text);
-    setCopiedBizum(true);
-    setTimeout(() => setCopiedBizum(false), 2000);
+    if (type === "bizum") {
+      setCopiedBizum(true);
+      setTimeout(() => setCopiedBizum(false), 2000);
+    } else {
+      setCopiedIban(true);
+      setTimeout(() => setCopiedIban(false), 2000);
+    }
   };
 
   const inputClass = "w-full bg-background border border-border rounded-lg px-4 py-3 font-body text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/50";
@@ -53,7 +61,7 @@ const DonateSection = () => {
                 <Heart className="w-14 h-14 text-accent mx-auto mb-4" />
                 <h3 className="font-display text-2xl font-bold text-foreground mb-2">¡Gracias por tu generosidad!</h3>
                 <p className="font-body text-muted-foreground">Tu intención de donativo de <strong>{finalAmount},00 €</strong> ha quedado registrada.</p>
-                <p className="font-body text-muted-foreground text-sm mt-2">Realiza el donativo por Bizum ONG con el código indicado abajo.</p>
+                <p className="font-body text-muted-foreground text-sm mt-2">Realiza el donativo por Bizum ONG o transferencia bancaria.</p>
               </div>
             ) : (
               <>
@@ -113,34 +121,80 @@ const DonateSection = () => {
               </>
             )}
 
-            {/* Bizum ONG info - always visible */}
+            {/* Cómo donar */}
             <div className="space-y-4 pt-4 border-t border-border">
-              <h4 className="font-display text-lg font-semibold text-foreground">Cómo donar</h4>
-              
-              <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 flex items-start gap-3">
-                <Info className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                  Al ser una asociación registrada como ONG, los donativos se realizan a través de <strong className="text-foreground">Bizum</strong> en la pestaña <strong className="text-foreground">"Donativos ONG"</strong> de tu aplicación bancaria. No es un número de móvil, es un código ONG.
-                </p>
+              <div className="flex items-center justify-between">
+                <h4 className="font-display text-lg font-semibold text-foreground">Cómo donar</h4>
+                <button
+                  onClick={() => setShowInfoModal(true)}
+                  className="text-muted-foreground hover:text-primary transition-colors p-1"
+                  aria-label="Más información sobre cómo donar"
+                >
+                  <Info className="w-5 h-5" />
+                </button>
               </div>
 
+              {/* Quick steps */}
+              <p className="font-body text-sm text-muted-foreground text-center">
+                Abre tu app bancaria → Bizum → <strong className="text-foreground">Donativos ONG</strong> → Introduce el código <strong className="text-foreground">12778</strong> → Elige la cantidad
+              </p>
+
+              {/* Bizum code */}
               <div className="bg-background rounded-lg p-5 border border-border flex items-center justify-between">
                 <div>
                   <p className="font-body text-sm text-muted-foreground mb-1">Bizum — Donativos ONG</p>
                   <p className="font-body text-foreground font-mono text-2xl font-bold tracking-wider">12778</p>
                 </div>
-                <button onClick={() => copyToClipboard("12778")} className="text-muted-foreground hover:text-primary transition-colors p-2">
+                <button onClick={() => copyToClipboard("12778", "bizum")} className="text-muted-foreground hover:text-primary transition-colors p-2">
                   {copiedBizum ? <Check className="w-5 h-5 text-primary" /> : <Copy className="w-5 h-5" />}
                 </button>
               </div>
 
-              <p className="font-body text-xs text-muted-foreground text-center">
-                Abre tu app bancaria → Bizum → Donativos ONG → Introduce el código <strong>12778</strong> → Elige la cantidad
-              </p>
+              {/* Transferencia bancaria */}
+              <div className="bg-background rounded-lg p-5 border border-border">
+                <p className="font-body text-sm text-muted-foreground mb-2">Transferencia bancaria</p>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="font-body text-foreground font-semibold">Asociación de Magos Solidarios</p>
+                    <p className="font-body text-foreground font-mono text-sm tracking-wider mt-1">ES12 0000 0000 0000 0000 0000</p>
+                  </div>
+                  <button onClick={() => copyToClipboard("ES12 0000 0000 0000 0000 0000", "iban")} className="text-muted-foreground hover:text-primary transition-colors p-2">
+                    {copiedIban ? <Check className="w-5 h-5 text-primary" /> : <Copy className="w-5 h-5" />}
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </FadeIn>
       </div>
+
+      {/* Info Modal */}
+      <Dialog open={showInfoModal} onOpenChange={setShowInfoModal}>
+        <DialogContent className="max-w-lg">
+          <div className="flex items-start gap-3 mb-4">
+            <Info className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+            <h3 className="font-display text-xl font-semibold text-foreground">¿Cómo funciona el donativo?</h3>
+          </div>
+          <div className="font-body text-muted-foreground space-y-4 leading-relaxed text-sm">
+            <p>
+              Al ser una asociación registrada como ONG, los donativos se realizan a través de <strong className="text-foreground">Bizum</strong> en la pestaña <strong className="text-foreground">"Donativos ONG"</strong> de tu aplicación bancaria. No es un número de móvil, es un código ONG.
+            </p>
+            <div className="bg-secondary rounded-lg p-4">
+              <p className="font-semibold text-foreground mb-2">Pasos para donar por Bizum ONG:</p>
+              <ol className="list-decimal list-inside space-y-1">
+                <li>Abre tu aplicación bancaria</li>
+                <li>Ve a la sección de Bizum</li>
+                <li>Selecciona <strong className="text-foreground">"Donativos ONG"</strong></li>
+                <li>Introduce el código <strong className="text-foreground">12778</strong></li>
+                <li>Elige la cantidad que desees donar</li>
+              </ol>
+            </div>
+            <p>
+              También puedes realizar tu donativo mediante <strong className="text-foreground">transferencia bancaria</strong> a la cuenta indicada en la sección de donaciones.
+            </p>
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
