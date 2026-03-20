@@ -24,7 +24,7 @@ const ImpactSection = () => (
         <div className="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto">
           {[
             { num: "50+", label: "Actuaciones" },
-            { num: "9", label: "Miembros" },
+            { num: "10", label: "Miembros" },
             { num: "∞", label: "Sonrisas" },
           ].map((stat) => (
             <div key={stat.label}>
