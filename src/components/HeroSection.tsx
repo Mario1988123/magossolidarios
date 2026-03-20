@@ -1,5 +1,6 @@
 import FadeIn from "./FadeIn";
 import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/logo.jpeg";
 
 const HeroSection = () => (
   <section
@@ -15,6 +16,9 @@ const HeroSection = () => (
 
     <div className="relative z-10 container mx-auto px-4 text-center pt-20">
       <FadeIn>
+        <img src={logo} alt="Magos Solidarios" className="h-28 w-28 md:h-36 md:w-36 rounded-full object-cover mx-auto mb-6 shadow-lg" />
+      </FadeIn>
+      <FadeIn delay={0.15}>
         <p className="text-primary font-body text-sm md:text-base tracking-[0.3em] uppercase mb-6">
           Asociación de Magos Solidarios
         </p>
