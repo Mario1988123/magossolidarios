@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         display: ['Playfair Display', 'serif'],
         body: ['Inter', 'sans-serif'],
+        logo: ['Lobster', 'cursive'],
       },
       colors: {
         border: "hsl(var(--border))",
