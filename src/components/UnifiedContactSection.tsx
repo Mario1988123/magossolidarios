@@ -1,6 +1,6 @@
 import FadeIn from "./FadeIn";
 import { useState } from "react";
-import { Send, Users, Briefcase, MessageCircle } from "lucide-react";
+import { Send, Users, Briefcase, MessageCircle, Facebook, Instagram, Youtube } from "lucide-react";
 
 type ContactType = "contacto" | "colaborar" | "contratar";
 
@@ -8,6 +8,12 @@ const tabs: { id: ContactType; label: string; icon: typeof Send; desc: string }[
   { id: "contacto", label: "Contacto general", icon: MessageCircle, desc: "Envíanos un mensaje o consulta." },
   { id: "colaborar", label: "Quiero colaborar", icon: Users, desc: "Únete como artista, voluntario o profesional." },
   { id: "contratar", label: "Contratar actuación", icon: Briefcase, desc: "Solicita presupuesto para tu evento." },
+];
+
+const socialLinks = [
+  { icon: Facebook, href: "https://www.facebook.com/magos.solidarios.ong", label: "Facebook" },
+  { icon: Instagram, href: "https://www.instagram.com/magos.solidarios/", label: "Instagram" },
+  { icon: Youtube, href: "https://www.youtube.com/@magossolidarios", label: "YouTube" },
 ];
 
 const UnifiedContactSection = () => {
@@ -128,13 +134,20 @@ const UnifiedContactSection = () => {
           </div>
         </FadeIn>
 
-        {/* Social links */}
+        {/* Social links & contact */}
         <FadeIn delay={0.35}>
-          <div className="mt-8 text-center space-y-2">
+          <div className="mt-8 text-center space-y-4">
             <p className="font-body text-muted-foreground text-sm">También puedes escribirnos directamente:</p>
             <a href="mailto:info@magossolidarios.com" className="font-body text-primary hover:underline text-sm">
               info@magossolidarios.com
             </a>
+            <div className="flex items-center justify-center gap-5 pt-2">
+              {socialLinks.map((s) => (
+                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} className="text-muted-foreground hover:text-accent transition-colors">
+                  <s.icon className="w-6 h-6" />
+                </a>
+              ))}
+            </div>
           </div>
         </FadeIn>
       </div>
