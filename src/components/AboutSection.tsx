@@ -12,6 +12,10 @@ import photoJoseCaballero from "@/assets/team/jose-caballero.jpg";
 import photoAlejandraRodriguez from "@/assets/team/alejandra-rodriguez.jpg";
 import photoCarlaCaballero from "@/assets/team/carla-caballero.jpeg";
 
+import imgD1 from "@/assets/d1.jpg";
+import imgD3 from "@/assets/d3.png";
+import imgD4 from "@/assets/d4.png";
+
 const values = [
   { icon: Heart, title: "Solidaridad", desc: "Actuamos con empatía y compromiso hacia quienes más lo necesitan." },
   { icon: Eye, title: "Transparencia", desc: "Gestionamos los recursos con responsabilidad y claridad." },
@@ -41,7 +45,7 @@ const AboutSection = () => (
         </h2>
       </FadeIn>
 
-      {/* d3: Magia con propósito - imagen junto al texto */}
+      {/* d3: Magia con propósito */}
       <FadeIn>
         <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
           <p className="font-body text-muted-foreground text-lg leading-relaxed">
@@ -50,8 +54,8 @@ const AboutSection = () => (
             con una misión clara: recaudar fondos para colectivos vulnerables a través de
             actuaciones de magia y eventos solidarios.
           </p>
-          <div className="aspect-[4/3] rounded-lg border-2 border-dashed border-primary/40 bg-primary/5 flex items-center justify-center">
-            <span className="font-display text-4xl font-bold text-primary/30">d3</span>
+          <div className="aspect-[4/3] rounded-lg overflow-hidden">
+            <img src={imgD3} alt="Magia con propósito" className="w-full h-full object-cover" />
           </div>
         </div>
       </FadeIn>
@@ -93,9 +97,8 @@ const AboutSection = () => (
                 </p>
               </div>
             </div>
-            {/* d1: Nuestra Historia */}
-            <div className="aspect-[4/3] rounded-lg border-2 border-dashed border-primary/40 bg-primary/5 flex items-center justify-center">
-              <span className="font-display text-4xl font-bold text-primary/30">d1</span>
+            <div className="aspect-[4/3] rounded-lg overflow-hidden">
+              <img src={imgD1} alt="Nuestra Historia" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -103,8 +106,8 @@ const AboutSection = () => (
 
       {/* d4: Imagen suelta entre secciones */}
       <FadeIn>
-        <div className="mb-20 rounded-xl overflow-hidden border-2 border-dashed border-primary/40 bg-primary/5 aspect-[21/9] flex items-center justify-center">
-          <span className="font-display text-5xl font-bold text-primary/30">d4</span>
+        <div className="mb-20 rounded-xl overflow-hidden aspect-[21/9]">
+          <img src={imgD4} alt="Magos Solidarios en acción" className="w-full h-full object-cover" />
         </div>
       </FadeIn>
 
