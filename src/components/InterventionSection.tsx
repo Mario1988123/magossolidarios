@@ -6,16 +6,19 @@ const interventions = [
     icon: Building2,
     title: "Ayuntamientos",
     desc: "Colaboramos con ayuntamientos para desarrollar eventos mágicos que recauden fondos para programas sociales, iniciativas comunitarias o proyectos de ayuda directa.",
+    placeholder: "d5",
   },
   {
     icon: Users,
     title: "Asociaciones",
     desc: "Diseñamos actuaciones adaptadas a las necesidades de cada asociación, ayudándolas a obtener recursos para sus causas y a dar visibilidad a su labor.",
+    placeholder: "d7",
   },
   {
     icon: Puzzle,
     title: "Otros",
     desc: "Intervenciones especiales para entidades, colectivos o situaciones que requieran apoyo económico o emocional. La magia se adapta a cada contexto.",
+    placeholder: "d8",
   },
 ];
 
@@ -33,6 +36,10 @@ const InterventionSection = () => (
         {interventions.map((item, i) => (
           <FadeIn key={item.title} delay={i * 0.15}>
             <div className="text-center">
+              {/* Placeholder de imagen */}
+              <div className="aspect-[4/3] rounded-lg border-2 border-dashed border-primary/40 bg-primary/5 flex items-center justify-center mb-6">
+                <span className="font-display text-3xl font-bold text-primary/30">{item.placeholder}</span>
+              </div>
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
                 <item.icon className="w-8 h-8 text-primary" />
               </div>

@@ -12,7 +12,6 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 import foto10 from "@/assets/gallery/foto-10.jpeg";
 import foto11 from "@/assets/gallery/foto-11.jpeg";
-import foto12 from "@/assets/gallery/foto-12.jpeg";
 import foto13 from "@/assets/gallery/foto-13.jpeg";
 import foto14 from "@/assets/gallery/foto-14.jpeg";
 import foto15 from "@/assets/gallery/foto-15.jpeg";
@@ -38,7 +37,7 @@ const categories = [
 ];
 
 const galleryPhotos = [
-  foto10, foto11, foto12, foto13, foto14,
+  foto10, foto11, foto13, foto14,
   foto15, foto16, foto17, foto18, foto19,
   foto20, foto21, foto22, foto23, foto24,
   foto25, foto26, foto27, foto28, foto29,
