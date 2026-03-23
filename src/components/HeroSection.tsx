@@ -7,9 +7,12 @@ const HeroSection = () => (
     id="inicio"
     className="relative min-h-screen flex items-center justify-center overflow-hidden"
   >
-    {/* Background */}
+    {/* Background - d2 placeholder */}
     <div className="absolute inset-0">
-      <img src={heroBg} alt="Espectáculo de magia" className="w-full h-full object-cover" />
+      <div className="w-full h-full bg-primary/5 border-2 border-dashed border-primary/30 flex items-center justify-center">
+        <span className="font-display text-6xl font-bold text-primary/20">d2</span>
+      </div>
+      <img src={heroBg} alt="Espectáculo de magia" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-background/70" />
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
     </div>

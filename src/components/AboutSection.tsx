@@ -39,12 +39,21 @@ const AboutSection = () => (
         <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground text-center mb-6">
           Magia con <span className="text-gradient-gold">propósito</span>
         </h2>
-        <p className="font-body text-muted-foreground text-center max-w-3xl mx-auto mb-16 text-lg leading-relaxed">
-          En Magos Solidarios creemos en el poder de la magia para cambiar realidades.
-          Somos una entidad formada por artistas, voluntarios y profesionales comprometidos
-          con una misión clara: recaudar fondos para colectivos vulnerables a través de
-          actuaciones de magia y eventos solidarios.
-        </p>
+      </FadeIn>
+
+      {/* d3: Magia con propósito - imagen junto al texto */}
+      <FadeIn>
+        <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
+          <p className="font-body text-muted-foreground text-lg leading-relaxed">
+            En Magos Solidarios creemos en el poder de la magia para cambiar realidades.
+            Somos una entidad formada por artistas, voluntarios y profesionales comprometidos
+            con una misión clara: recaudar fondos para colectivos vulnerables a través de
+            actuaciones de magia y eventos solidarios.
+          </p>
+          <div className="aspect-[4/3] rounded-lg border-2 border-dashed border-primary/40 bg-primary/5 flex items-center justify-center">
+            <span className="font-display text-4xl font-bold text-primary/30">d3</span>
+          </div>
+        </div>
       </FadeIn>
 
       {/* Misión, Visión, Valores */}
@@ -60,27 +69,42 @@ const AboutSection = () => (
         ))}
       </div>
 
-      {/* Historia */}
+      {/* Historia con d1 */}
       <FadeIn>
-        <div className="bg-card rounded-lg p-8 md:p-12 border border-border shadow-card mb-20">
-          <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6">
-            Nuestra <span className="text-gradient-gold">Historia</span>
-          </h3>
-          <div className="font-body text-muted-foreground space-y-4 leading-relaxed">
-            <p>
-              El 29 de octubre de 2024, la maldita DANA nos cambió la vida. El azote de la catástrofe
-              ocasionó una multitud de desgracias. También nuestros compañeros magos, que residen en
-              la zona afectada, sufrieron en toda su crudeza las consecuencias.
-            </p>
-            <p>
-              Por tal motivo, a un grupo de magos nos surge la idea de programar en diferentes localidades
-              eventos solidarios de magia, con el fin de recaudar donativos para los perjudicados.
-            </p>
-            <p>
-              El proyecto va más allá y el 30/07/2025 nos inscribimos en el Registro Nacional de Asociaciones,
-              del Ministerio del Interior, Sección 1ª / Número Nacional: 631161.
-            </p>
+        <div className="bg-card rounded-lg p-8 md:p-12 border border-border shadow-card mb-12">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6">
+                Nuestra <span className="text-gradient-gold">Historia</span>
+              </h3>
+              <div className="font-body text-muted-foreground space-y-4 leading-relaxed">
+                <p>
+                  El 29 de octubre de 2024, la maldita DANA nos cambió la vida. El azote de la catástrofe
+                  ocasionó una multitud de desgracias. También nuestros compañeros magos, que residen en
+                  la zona afectada, sufrieron en toda su crudeza las consecuencias.
+                </p>
+                <p>
+                  Por tal motivo, a un grupo de magos nos surge la idea de programar en diferentes localidades
+                  eventos solidarios de magia, con el fin de recaudar donativos para los perjudicados.
+                </p>
+                <p>
+                  El proyecto va más allá y el 30/07/2025 nos inscribimos en el Registro Nacional de Asociaciones,
+                  del Ministerio del Interior, Sección 1ª / Número Nacional: 631161.
+                </p>
+              </div>
+            </div>
+            {/* d1: Nuestra Historia */}
+            <div className="aspect-[4/3] rounded-lg border-2 border-dashed border-primary/40 bg-primary/5 flex items-center justify-center">
+              <span className="font-display text-4xl font-bold text-primary/30">d1</span>
+            </div>
           </div>
+        </div>
+      </FadeIn>
+
+      {/* d4: Imagen suelta entre secciones */}
+      <FadeIn>
+        <div className="mb-20 rounded-xl overflow-hidden border-2 border-dashed border-primary/40 bg-primary/5 aspect-[21/9] flex items-center justify-center">
+          <span className="font-display text-5xl font-bold text-primary/30">d4</span>
         </div>
       </FadeIn>
 
