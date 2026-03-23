@@ -37,7 +37,7 @@ const categories = [
 ];
 
 const galleryPhotos = [
-  foto10, foto11, foto12, foto13, foto14,
+  foto10, foto11, foto13, foto14,
   foto15, foto16, foto17, foto18, foto19,
   foto20, foto21, foto22, foto23, foto24,
   foto25, foto26, foto27, foto28, foto29,

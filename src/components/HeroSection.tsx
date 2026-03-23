@@ -1,6 +1,6 @@
 import FadeIn from "./FadeIn";
 import heroBg from "@/assets/hero-bg.jpg";
-import logo from "@/assets/logo.jpeg";
+import logo from "@/assets/logo.png";
 
 const HeroSection = () => (
   <section
