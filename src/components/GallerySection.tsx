@@ -12,7 +12,6 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 import foto10 from "@/assets/gallery/foto-10.jpeg";
 import foto11 from "@/assets/gallery/foto-11.jpeg";
-import foto12 from "@/assets/gallery/foto-12.jpeg";
 import foto13 from "@/assets/gallery/foto-13.jpeg";
 import foto14 from "@/assets/gallery/foto-14.jpeg";
 import foto15 from "@/assets/gallery/foto-15.jpeg";
