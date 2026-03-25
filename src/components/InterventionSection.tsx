@@ -1,28 +1,27 @@
 import FadeIn from "./FadeIn";
 import { Building2, Users, Puzzle } from "lucide-react";
+import imgD5 from "@/assets/d5.jpg";
 import imgD7 from "@/assets/d7.jpg";
+import imgD8 from "@/assets/d8.jpg";
 
 const interventions = [
   {
     icon: Building2,
     title: "Ayuntamientos",
     desc: "Colaboramos con ayuntamientos para desarrollar eventos mágicos que recauden fondos para programas sociales, iniciativas comunitarias o proyectos de ayuda directa.",
-    placeholder: "d5",
-    image: null,
+    image: imgD5,
   },
   {
     icon: Users,
     title: "Asociaciones",
     desc: "Diseñamos actuaciones adaptadas a las necesidades de cada asociación, ayudándolas a obtener recursos para sus causas y a dar visibilidad a su labor.",
-    placeholder: "d7",
     image: imgD7,
   },
   {
     icon: Puzzle,
     title: "Otros",
     desc: "Intervenciones especiales para entidades, colectivos o situaciones que requieran apoyo económico o emocional. La magia se adapta a cada contexto.",
-    placeholder: "d8",
-    image: null,
+    image: imgD8,
   },
 ];
 
