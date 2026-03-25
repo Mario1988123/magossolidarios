@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Youtube } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logoCompleto from "@/assets/logo-completo.png";
+import logoTexto from "@/assets/logo-texto.png";
 
 const socialLinks = [
   { icon: Facebook, href: "https://www.facebook.com/magos.solidarios.ong", label: "Facebook" },
