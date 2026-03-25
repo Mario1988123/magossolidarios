@@ -21,8 +21,8 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <a href="#inicio" className="flex items-center gap-3">
-          <img src={logo} alt="Magos Solidarios" className="h-12 w-12 rounded-full object-cover shadow-md" />
-          <span className="font-logo text-2xl text-primary">Magos Solidarios</span>
+          <img src={logoCompleto} alt="Magos Solidarios" className="h-14 w-auto object-contain" />
+          <img src={logoTexto} alt="Magos Solidarios" className="h-8 w-auto object-contain" />
         </a>
 
         {/* Desktop */}
