@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Youtube } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logoCompleto from "@/assets/logo-completo.png";
+import logoTexto from "@/assets/logo-texto.png";
 
 const socialLinks = [
   { icon: Facebook, href: "https://www.facebook.com/magos.solidarios.ong", label: "Facebook" },
@@ -11,8 +12,8 @@ const Footer = () => (
   <footer className="bg-background border-t border-border py-8 px-4">
     <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
       <div className="flex items-center gap-3">
-        <img src={logo} alt="Magos Solidarios" className="h-10 w-10 rounded-full object-cover" />
-        <p className="font-logo text-xl text-primary">Magos Solidarios</p>
+        <img src={logoCompleto} alt="Magos Solidarios" className="h-12 w-auto object-contain" />
+        <img src={logoTexto} alt="Magos Solidarios" className="h-6 w-auto object-contain" />
       </div>
       <div className="flex items-center gap-4">
         {socialLinks.map((s) => (
