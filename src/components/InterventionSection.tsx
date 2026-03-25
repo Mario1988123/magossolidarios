@@ -40,13 +40,7 @@ const InterventionSection = () => (
           <FadeIn key={item.title} delay={i * 0.15}>
             <div className="text-center">
               <div className="aspect-[4/3] rounded-lg overflow-hidden mb-6">
-                {item.image ? (
-                  <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-                ) : (
-                  <div className="w-full h-full border-2 border-dashed border-primary/40 bg-primary/5 flex items-center justify-center">
-                    <span className="font-display text-3xl font-bold text-primary/30">{item.placeholder}</span>
-                  </div>
-                )}
+                <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
               </div>
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
                 <item.icon className="w-8 h-8 text-primary" />
