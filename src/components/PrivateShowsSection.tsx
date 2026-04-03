@@ -51,6 +51,7 @@ const PrivateShowsSection = () => (
           >
             Solicitar presupuesto
           </a>
+          </div>
         </div>
       </FadeIn>
     </div>
