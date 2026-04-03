@@ -44,12 +44,14 @@ const PrivateShowsSection = () => (
             </ul>
           </div>
 
+          <div className="text-center">
           <a
             href="#contacto"
             className="inline-flex bg-gradient-gold text-primary-foreground font-body font-semibold px-8 py-3 rounded-lg hover:opacity-90 transition-opacity shadow-gold"
           >
             Solicitar presupuesto
           </a>
+          </div>
         </div>
       </FadeIn>
     </div>

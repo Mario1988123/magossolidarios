@@ -76,30 +76,26 @@ const AboutSection = () => (
       {/* Historia con d1 */}
       <FadeIn>
         <div className="bg-card rounded-lg p-8 md:p-12 border border-border shadow-card mb-12">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6">
-                Nuestra <span className="text-gradient-gold">Historia</span>
-              </h3>
-              <div className="font-body text-muted-foreground space-y-4 leading-relaxed">
-                <p>
-                  El 29 de octubre de 2024, la maldita DANA nos cambió la vida. El azote de la catástrofe
-                  ocasionó una multitud de desgracias. También nuestros compañeros magos, que residen en
-                  la zona afectada, sufrieron en toda su crudeza las consecuencias.
-                </p>
-                <p>
-                  Por tal motivo, a un grupo de magos nos surge la idea de programar en diferentes localidades
-                  eventos solidarios de magia, con el fin de recaudar donativos para los perjudicados.
-                </p>
-                <p>
-                  El proyecto va más allá y el 30/07/2025 nos inscribimos en el Registro Nacional de Asociaciones,
-                  del Ministerio del Interior, Sección 1ª / Número Nacional: 631161.
-                </p>
-              </div>
-            </div>
-            <div className="aspect-[4/3] rounded-lg overflow-hidden">
-              <img src={imgD1} alt="Nuestra Historia" className="w-full h-full object-cover" />
-            </div>
+          <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6">
+            Nuestra <span className="text-gradient-gold">Historia</span>
+          </h3>
+          <div className="font-body text-muted-foreground space-y-4 leading-relaxed mb-8">
+            <p>
+              El 29 de octubre de 2024, la maldita DANA nos cambió la vida. El azote de la catástrofe
+              ocasionó una multitud de desgracias. También nuestros compañeros magos, que residen en
+              la zona afectada, sufrieron en toda su crudeza las consecuencias.
+            </p>
+            <p>
+              Por tal motivo, a un grupo de magos nos surge la idea de programar en diferentes localidades
+              eventos solidarios de magia, con el fin de recaudar donativos para los perjudicados.
+            </p>
+            <p>
+              El proyecto va más allá y el 30/07/2025 nos inscribimos en el Registro Nacional de Asociaciones,
+              del Ministerio del Interior, Sección 1ª / Número Nacional: 631161.
+            </p>
+          </div>
+          <div className="rounded-lg overflow-hidden aspect-[21/9]">
+            <img src={imgD1} alt="Magos Solidarios" className="w-full h-full object-cover object-top" />
           </div>
         </div>
       </FadeIn>
