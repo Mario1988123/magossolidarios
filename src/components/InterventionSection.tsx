@@ -3,6 +3,7 @@ import { Building2, Users, Puzzle } from "lucide-react";
 import imgD5 from "@/assets/d5.jpg";
 import imgD7 from "@/assets/d7.jpg";
 import imgD8 from "@/assets/d8.jpg";
+import imgD7new from "@/assets/d7.jpg";
 
 const interventions = [
   {

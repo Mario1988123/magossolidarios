@@ -26,6 +26,10 @@ const testimonials = [
     name: "La Bella Maga",
     text: "Pertenecer a Magos Solidarios significa usar la magia no solo para entretener, sino para regalar ilusión donde más se necesita, llevar sonrisas y aliviar momentos difíciles.",
   },
+  {
+    name: "Mago Caba",
+    text: "Magos Solidarios nació para devolver la ayuda recibida mediante el ilusionismo. Miguel y otros compañeros transformaron esta idea en una asociación. Su labor regala momentos de alivio y entrega desinteresada a los demás.",
+  },
 ];
 
 const TestimonialsSection = () => (

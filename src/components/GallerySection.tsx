@@ -49,7 +49,7 @@ const GallerySection = () => {
   const activeCategory = categories.find((c) => c.id === activeTab)!;
 
   return (
-    <section id="galeria" className="section-padding bg-background">
+    <section id="galeria" className="py-12 md:py-16 px-4 bg-background">
       <div className="container mx-auto">
         <FadeIn>
           <p className="text-primary font-body text-sm tracking-[0.3em] uppercase text-center mb-3">Galería</p>

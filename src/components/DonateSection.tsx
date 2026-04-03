@@ -185,7 +185,7 @@ const DonateSection = () => {
                 <li>Abre tu aplicación bancaria</li>
                 <li>Ve a la sección de Bizum</li>
                 <li>Selecciona <strong className="text-foreground">"Donativos ONG"</strong></li>
-                <li>Introduce el código <strong className="text-foreground">12778</strong></li>
+                <li>Introduce el código <strong className="text-foreground">12788</strong></li>
                 <li>Elige la cantidad que desees donar</li>
               </ol>
             </div>
