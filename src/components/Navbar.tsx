@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logoCompleto from "@/assets/logo-completo.png";
 import logoTexto from "@/assets/logo-texto.png";
 import ThemeToggle from "./ThemeToggle";
 
