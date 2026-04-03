@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logoCompleto from "@/assets/logo-completo.png";
 import logoTexto from "@/assets/logo-texto.png";
 import ThemeToggle from "./ThemeToggle";
 
@@ -20,9 +19,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <a href="#inicio" className="flex items-center gap-3">
-          <img src={logoCompleto} alt="Magos Solidarios" className="h-14 w-auto object-contain" />
-          <img src={logoTexto} alt="Magos Solidarios" className="h-8 w-auto object-contain" />
+        <a href="#inicio" className="flex items-center">
+          <img src={logoTexto} alt="Magos Solidarios" className="h-10 w-auto object-contain" />
         </a>
 
         {/* Desktop */}

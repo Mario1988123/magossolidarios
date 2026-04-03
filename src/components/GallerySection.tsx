@@ -49,7 +49,7 @@ const GallerySection = () => {
   const activeCategory = categories.find((c) => c.id === activeTab)!;
 
   return (
-    <section id="galeria" className="section-padding bg-background">
+    <section id="galeria" className="py-12 md:py-16 px-4 bg-background">
       <div className="container mx-auto">
         <FadeIn>
           <p className="text-primary font-body text-sm tracking-[0.3em] uppercase text-center mb-3">Galería</p>
@@ -93,9 +93,9 @@ const GallerySection = () => {
             >
               <CarouselContent>
                 {galleryPhotos.map((src, i) => (
-                  <CarouselItem key={i} className="basis-full md:basis-1/3">
+                  <CarouselItem key={i} className="basis-full md:basis-1/2">
                     <div
-                      className="aspect-[4/3] rounded-lg overflow-hidden border border-border cursor-pointer"
+                      className="aspect-[3/2] rounded-lg overflow-hidden border border-border cursor-pointer"
                       onClick={() => setSelectedPhoto(src)}
                     >
                       <img

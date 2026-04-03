@@ -136,16 +136,16 @@ const DonateSection = () => {
 
               {/* Quick steps */}
               <p className="font-body text-sm text-muted-foreground text-center">
-                Abre tu app bancaria → Bizum → <strong className="text-foreground">Donativos ONG</strong> → Introduce el código <strong className="text-foreground">12778</strong> → Elige la cantidad
+                Abre tu app bancaria → Bizum → <strong className="text-foreground">Donativos ONG</strong> → Introduce el código <strong className="text-foreground">12788</strong> → Elige la cantidad
               </p>
 
               {/* Bizum code */}
               <div className="bg-background rounded-lg p-5 border border-border flex items-center justify-between">
                 <div>
                   <p className="font-body text-sm text-muted-foreground mb-1">Bizum — Donativos ONG</p>
-                  <p className="font-body text-foreground font-mono text-2xl font-bold tracking-wider">12778</p>
+                  <p className="font-body text-foreground font-mono text-2xl font-bold tracking-wider">12788</p>
                 </div>
-                <button onClick={() => copyToClipboard("12778", "bizum")} className="text-muted-foreground hover:text-primary transition-colors p-2">
+                <button onClick={() => copyToClipboard("12788", "bizum")} className="text-muted-foreground hover:text-primary transition-colors p-2">
                   {copiedBizum ? <Check className="w-5 h-5 text-primary" /> : <Copy className="w-5 h-5" />}
                 </button>
               </div>
@@ -185,7 +185,7 @@ const DonateSection = () => {
                 <li>Abre tu aplicación bancaria</li>
                 <li>Ve a la sección de Bizum</li>
                 <li>Selecciona <strong className="text-foreground">"Donativos ONG"</strong></li>
-                <li>Introduce el código <strong className="text-foreground">12778</strong></li>
+                <li>Introduce el código <strong className="text-foreground">12788</strong></li>
                 <li>Elige la cantidad que desees donar</li>
               </ol>
             </div>
