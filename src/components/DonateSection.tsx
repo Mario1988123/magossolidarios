@@ -143,9 +143,9 @@ const DonateSection = () => {
               <div className="bg-background rounded-lg p-5 border border-border flex items-center justify-between">
                 <div>
                   <p className="font-body text-sm text-muted-foreground mb-1">Bizum — Donativos ONG</p>
-                  <p className="font-body text-foreground font-mono text-2xl font-bold tracking-wider">12778</p>
+                  <p className="font-body text-foreground font-mono text-2xl font-bold tracking-wider">12788</p>
                 </div>
-                <button onClick={() => copyToClipboard("12778", "bizum")} className="text-muted-foreground hover:text-primary transition-colors p-2">
+                <button onClick={() => copyToClipboard("12788", "bizum")} className="text-muted-foreground hover:text-primary transition-colors p-2">
                   {copiedBizum ? <Check className="w-5 h-5 text-primary" /> : <Copy className="w-5 h-5" />}
                 </button>
               </div>
