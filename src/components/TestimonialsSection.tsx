@@ -42,15 +42,17 @@ const TestimonialsSection = () => (
         </h2>
       </FadeIn>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="flex flex-col gap-5 max-w-4xl mx-auto">
         {testimonials.map((t, i) => (
-          <FadeIn key={t.name} delay={i * 0.1}>
-            <div className="bg-card rounded-lg p-6 border border-border hover:border-primary/30 transition-colors shadow-card h-full flex flex-col">
-              <Quote className="w-8 h-8 text-primary/40 mb-4 shrink-0" />
-              <p className="font-body text-muted-foreground text-sm leading-relaxed mb-6 flex-1 italic">
-                "{t.text}"
-              </p>
-              <p className="font-display text-foreground font-semibold text-sm">{t.name}</p>
+          <FadeIn key={t.name} delay={i * 0.08}>
+            <div className="bg-card rounded-lg p-6 border border-border hover:border-primary/30 transition-colors shadow-card flex items-start gap-4">
+              <Quote className="w-7 h-7 text-primary/40 shrink-0 mt-1" />
+              <div>
+                <p className="font-body text-muted-foreground text-sm leading-relaxed italic mb-2">
+                  "{t.text}"
+                </p>
+                <p className="font-display text-foreground font-semibold text-sm">{t.name}</p>
+              </div>
             </div>
           </FadeIn>
         ))}
