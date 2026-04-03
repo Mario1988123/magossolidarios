@@ -93,9 +93,9 @@ const GallerySection = () => {
             >
               <CarouselContent>
                 {galleryPhotos.map((src, i) => (
-                  <CarouselItem key={i} className="basis-full md:basis-1/3">
+                  <CarouselItem key={i} className="basis-full md:basis-1/2">
                     <div
-                      className="aspect-[4/3] rounded-lg overflow-hidden border border-border cursor-pointer"
+                      className="aspect-[3/2] rounded-lg overflow-hidden border border-border cursor-pointer"
                       onClick={() => setSelectedPhoto(src)}
                     >
                       <img
