@@ -138,7 +138,7 @@ const UnifiedContactSection = () => {
         <FadeIn delay={0.35}>
           <div className="mt-8 text-center space-y-4">
             <p className="font-body text-muted-foreground text-sm">También puedes escribirnos directamente:</p>
-            <a href="mailto:info@magossolidarios.com" className="font-body text-primary hover:underline text-sm">
+            <a href="mailto:info@magossolidarios.com" className="font-body text-primary hover:underline text-base font-medium">
               info@magossolidarios.com
             </a>
             <div className="flex items-center justify-center gap-5 pt-2">
