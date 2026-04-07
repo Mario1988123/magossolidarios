@@ -56,11 +56,6 @@ const HeroSection = () => (
       }
       .magic-logo {
         animation: magic-appear 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-        perspective: 800px;
-      }
-      .magic-logo-glow {
-        animation: sparkle-ring 2s ease-out 0.5s forwards;
-        border-radius: 50%;
       }
     `}</style>
 
@@ -71,7 +66,7 @@ const HeroSection = () => (
     </div>
 
     <div className="relative z-10 container mx-auto px-4 text-center pt-20">
-      <div className="magic-logo-glow inline-block mb-6">
+      <div className="inline-block mb-6">
         <img
           src={logoCompleto}
           alt="Magos Solidarios"
