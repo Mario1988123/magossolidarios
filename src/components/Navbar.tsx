@@ -28,7 +28,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg border-b border-border/50" style={{ backgroundColor: 'hsl(230 30% 10% / 0.92)' }}>
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg border-b border-border/50" style={{ backgroundColor: 'hsl(230 25% 18% / 0.88)' }}>
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <a href="#inicio" className="flex items-center gap-2">
           {scrolled ? (
@@ -75,7 +75,7 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <div className="lg:hidden backdrop-blur-lg border-b border-border/50" style={{ backgroundColor: 'hsl(230 30% 10% / 0.95)' }}>
+        <div className="lg:hidden backdrop-blur-lg border-b border-border/50" style={{ backgroundColor: 'hsl(230 25% 18% / 0.92)' }}>
           <ul className="flex flex-col py-4 px-4 gap-4">
             {navItems.map((item) => (
               <li key={item.href}>
