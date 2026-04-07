@@ -18,7 +18,7 @@ const Footer = () => (
       <div className="flex items-center gap-4">
         {socialLinks.map((s) => (
           <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} className="text-muted-foreground hover:text-accent transition-colors">
-            <s.icon className="w-10 h-10" />
+            <s.icon className="w-5 h-5" />
           </a>
         ))}
       </div>
