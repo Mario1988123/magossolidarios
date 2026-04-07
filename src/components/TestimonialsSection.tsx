@@ -48,10 +48,10 @@ const TestimonialsSection = () => (
             <div className="bg-card rounded-lg p-6 border border-border hover:border-primary/30 transition-colors shadow-card flex items-start gap-4">
               <Quote className="w-7 h-7 text-primary/40 shrink-0 mt-1" />
               <div>
-                <p className="font-body text-muted-foreground text-sm leading-relaxed italic mb-2">
+              <p className="font-body text-muted-foreground text-sm leading-relaxed italic mb-3">
                   "{t.text}"
                 </p>
-                <p className="font-display text-foreground font-semibold text-sm">{t.name}</p>
+                <p className="font-display text-primary font-bold text-base tracking-wide">— {t.name}</p>
               </div>
             </div>
           </FadeIn>

@@ -100,12 +100,6 @@ const AboutSection = () => (
         </div>
       </FadeIn>
 
-      {/* d4: Imagen suelta entre secciones */}
-      <FadeIn>
-        <div className="mb-20 rounded-xl overflow-hidden aspect-[21/9]">
-          <img src={imgD4} alt="Magos Solidarios en acción" className="w-full h-full object-cover" />
-        </div>
-      </FadeIn>
 
       {/* Equipo humano */}
       <FadeIn>
