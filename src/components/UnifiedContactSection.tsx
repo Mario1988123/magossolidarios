@@ -144,7 +144,7 @@ const UnifiedContactSection = () => {
             <div className="flex items-center justify-center gap-5 pt-2">
               {socialLinks.map((s) => (
                 <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} className="text-muted-foreground hover:text-accent transition-colors">
-                  <s.icon className="w-6 h-6" />
+                  <s.icon className="w-9 h-9" />
                 </a>
               ))}
             </div>
