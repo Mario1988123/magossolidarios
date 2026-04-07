@@ -28,7 +28,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-card dark:bg-background/80 backdrop-blur-lg border-b border-border/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg border-b border-border/50" style={{ backgroundColor: 'hsl(230 30% 10% / 0.92)' }}>
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <a href="#inicio" className="flex items-center gap-2">
           {scrolled ? (
